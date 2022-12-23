@@ -9,6 +9,7 @@ const form = document.querySelector('form');
 const projects = document.querySelector('.projects');
 
 window.addEventListener('scroll', () => {
+
   if (window.scrollY > 80 && window.innerWidth > 768) {
     header.style.background = '#fff';
     header.style.borderBottom = '1px solid #f7f7f9';
@@ -131,7 +132,7 @@ for (let i = 0; i < linksMenu.length; i += 1) {
 const seeProjectsBtns = document.querySelectorAll('.projects .buttons');
 
 seeProjectsBtns.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('onClick', () => {
     const title = popUp.querySelector('.pop-up-title');
     const descriptors = popUp.querySelector('.explaining-list');
     const img = popUp.querySelector('img');
@@ -193,4 +194,5 @@ form.addEventListener('submit', (event) => {
   showSuccess(email);
 
   form.submit();
+  debugger;
 });
